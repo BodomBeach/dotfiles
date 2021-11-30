@@ -1,0 +1,33 @@
+{
+    "type": "script",
+    "description": "rails console reloader",
+    "store": {},
+    "modes": [
+        1
+    ],
+    "usageCount": 35,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": true,
+    "abbreviation": {
+        "abbreviations": [
+            "RL"
+        ],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": true,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [
+            "<ctrl>",
+            "<shift>"
+        ],
+        "hotKey": "f"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}

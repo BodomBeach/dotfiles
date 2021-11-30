@@ -1,1 +1,9 @@
+# Ignore everything
 *
+
+# Whitelist a folder
+!.config/
+!.config/autokey/
+!.config/autokey/data/
+!.config/autokey/data/Nicoscripts
+!.config/autokey/data/Nicoscripts/*

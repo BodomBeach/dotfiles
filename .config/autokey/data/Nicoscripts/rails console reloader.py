@@ -1,0 +1,1 @@
+keyboard.send_keys("load('tmp/reloader.rb');")
