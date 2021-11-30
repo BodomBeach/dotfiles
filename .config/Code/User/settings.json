@@ -1,0 +1,31 @@
+{
+    "todo-tree.tree.showScanModeButton": false,
+    "yaml.schemas": {
+      "file:///home/nico/.vscode/extensions/atlassian.atlascode-2.10.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "files.autoSave": "onFocusChange",
+    "atlascode.jira.lastCreateSiteAndProject": {
+      "siteId": "",
+      "projectKey": ""
+    },
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.minimap.size": "fit",
+    "editor.wordWrap": "on",
+    "redhat.telemetry.enabled": true,
+    "workbench.editorAssociations": {
+      "*.gz": "default"
+    },
+    "files.trimTrailingWhitespace": true,
+  "emmet.includeLanguages": {
+    "erb": "html",
+  },
+  "html.format.templating": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.maxTokenizationLineLength": 2000000,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": true,
+}
