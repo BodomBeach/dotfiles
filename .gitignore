@@ -1,6 +1,18 @@
 # Ignore everything
 *
 
+# Whitelist file
+!.surfingkeys.js
+!.config/Code/User/keybindings.json
+!.config/Code/User/settings.json
+!.config/Code/User/snippets/puts.code-snippets
+!.gitignore
+!.ssh/config
+!.zprezto/init.zsh
+!.zprezto/modules/git/alias.zsh
+!.zpreztorc
+!.zshrc
+
 # Whitelist a folder
 !.config/
 !.config/autokey/
