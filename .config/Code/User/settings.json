@@ -28,4 +28,5 @@
   "editor.renderWhitespace": "all",
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": true,
+  "ruby.intellisense": "rubyLocate",
 }

@@ -1,11 +1,12 @@
 # Ignore everything
 *
 
-# Whitelist file
+# Whitelisted files
 !.surfingkeys.js
 !.config/Code/User/keybindings.json
 !.config/Code/User/settings.json
 !.config/Code/User/snippets/puts.code-snippets
+!.config/ncspot/config.toml
 !.gitignore
 !.ssh/config
 !.zprezto/init.zsh
@@ -13,7 +14,7 @@
 !.zpreztorc
 !.zshrc
 
-# Whitelist a folder
+# Whitelisted folders
 !.config/
 !.config/autokey/
 !.config/autokey/data/
