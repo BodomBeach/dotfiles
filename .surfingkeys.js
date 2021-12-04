@@ -3,7 +3,17 @@ mapkey('<Ctrl-y>', 'Show me the money', function() {
   Front.showPopup('Coucou');
 });
 // an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
-map('gt', 'T');
+map('yv', 's');
 
-// an example to remove mapkey `Ctrl-i`
-unmap('<Ctrl-i>');
+// history
+unmap('<Ctrl-h>');
+
+// search engines
+unmap('<Ctrl-sg>');
+unmap('<Ctrl-sd>');
+unmap('<Ctrl-sb>');
+unmap('<Ctrl-se>');
+unmap('<Ctrl-sw>');
+unmap('<Ctrl-ss>');
+unmap('<Ctrl-sh>');
+unmap('<Ctrl-sy>');
