@@ -233,5 +233,19 @@
     {
       "key": "alt+m",
       "command": "copyRelativeFilePath"
+    },
+    {
+      "key": "alt+g",
+      "command": "workbench.view.scm",
+      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+      "key": "ctrl+shift+g g",
+      "command": "-workbench.view.scm",
+      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+      "key": "alt+s alt+d",
+      "command": "git.stage"
     }
 ]
