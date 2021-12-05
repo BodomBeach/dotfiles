@@ -14,6 +14,10 @@
 !.zprezto/modules/git/alias.zsh
 !.zpreztorc
 !.zshrc
+!.tmux.conf
+!.Xresources
+
+
 
 # Whitelisted folders
 !.config/
@@ -21,3 +25,7 @@
 !.config/autokey/data/
 !.config/autokey/data/Nicoscripts
 !.config/autokey/data/Nicoscripts/*
+
+!.urxvt/
+!.urxvt/ext
+!.urxvt/ext/*

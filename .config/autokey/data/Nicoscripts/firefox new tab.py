@@ -6,3 +6,4 @@ if 'Mozilla Firefox' in output:
     keyboard.send_keys("<ctrl>+t")
 else:
     subprocess.Popen(["/usr/bin/firefox"])
+foo = bar
