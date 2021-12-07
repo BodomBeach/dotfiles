@@ -15,8 +15,7 @@
 !.zpreztorc
 !.zshrc
 !.tmux.conf
-!.Xresources
-
+!.tmux.conf.local
 
 
 # Whitelisted folders
@@ -29,3 +28,6 @@
 !.urxvt/
 !.urxvt/ext
 !.urxvt/ext/*
+
+# not used but could be useful (urxvt config)
+!.Xresources

@@ -9,11 +9,11 @@ map('yv', 's');
 unmap('<Ctrl-h>');
 
 // search engines
-unmap('<sg>');
-unmap('<sd>');
-unmap('<sb>');
-unmap('<se>');
-unmap('<sw>');
-unmap('<ss>');
-unmap('<sh>');
-unmap('<sy>');
+unmap('sg');
+unmap('sd');
+unmap('sb');
+unmap('se');
+unmap('sw');
+unmap('ss');
+unmap('sh');
+unmap('sy');

@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "firefox next tab",
+    "description": "prev tab",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 513,
+    "usageCount": 462,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -21,7 +21,7 @@
         "modifiers": [
             "<alt>"
         ],
-        "hotKey": "e"
+        "hotKey": "q"
     },
     "filter": {
         "regex": null,

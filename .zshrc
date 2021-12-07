@@ -53,7 +53,6 @@ alias rdms='rake db:migrate:status'
 alias rdr='rake db:rollback'
 alias rdt='rake db:test:prepare'
 alias rdtt='rake db:drop db:create db:migrate db:seed'
-alias e2='cd ~/PROJECTS/epices2'
 alias pk='cd ~/PROJECTS/parakraken'
 alias dps='docker ps -a --format "{{.Names}} --- {{.Status}} -- -{{.Ports}}"'
 alias ds='docker start'
@@ -76,7 +75,7 @@ function dr() {
 }
 
 function dbtest() {
-  rake db:test:prepare
+  rake db:create db:structure:load
 }
 
 function qq() {
@@ -84,7 +83,15 @@ function qq() {
 }
 
 function qq2() {
-  xrandr --output eDP --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 1929x0 --rotate normal --output DisplayPort-0 --off --output DisplayPort-1 --off
+  xrandr --output eDP --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DisplayPort-0 --off --output DisplayPort-1 --off
+}
+
+function qq3() {
+  xrandr \
+  --output eDP --mode 1920x1080 --pos 1080x1410 --rotate normal \
+  --output HDMI-A-0 --primary --mode 1920x1080 --pos 1081x330 --rotate normal \
+  --output DisplayPort-0 --off \
+  --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate left
 }
 
 # Kill puma process (normally last pid)
@@ -110,5 +117,22 @@ function s3() { # Laptop sound
 export PATH="$PATH:$HOME/.rvm/bin"
 cd .
 
+function e2() {
+  tmux has-session -t epices-dev &> /dev/null
+
+  if [ $? != 0 ]
+  then
+    tmux new-session -s epices-dev -d
+    tmux send-keys -t epices-dev "~/PROJECTS/epices2" C-m
+    tmux send-keys -t epices-dev c
+    tmux send-keys -t epices-dev c
+  fi
+
+  tmux attach -t epices-dev
+}
+
+
 # run screen setup on terminal init
-qq2
+qq3
+# attach to last tmux session
+# tmux a

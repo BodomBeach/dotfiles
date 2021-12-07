@@ -29,4 +29,5 @@
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": true,
   "ruby.intellisense": "rubyLocate",
+  "workbench.editor.untitled.hint": "hidden",
 }
