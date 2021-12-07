@@ -7,7 +7,6 @@ mapkey('<Ctrl-y>', 'Show me the money', function() {
 unmap('<Ctrl-h>');
 
 // search engines
-unmap('s');
 unmap('sg');
 unmap('sd');
 unmap('sb');

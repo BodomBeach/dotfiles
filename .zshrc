@@ -79,11 +79,19 @@ function dbtest() {
 }
 
 function qq() {
-  xrandr --output eDP --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --off --output DisplayPort-0 --off --output DisplayPort-1 --primary --mode 1920x1080 --pos 1929x0 --rotate normal
+  xrandr \
+  --output eDP --mode 1920x1080 --pos 0x0 --rotate normal \
+  --output HDMI-A-0 --off \
+  --output DisplayPort-0 --off \
+  --output DisplayPort-1 --primary --mode 1920x1080 --pos 1929x0 --rotate normal
 }
 
 function qq2() {
-  xrandr --output eDP --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DisplayPort-0 --off --output DisplayPort-1 --off
+  xrandr \
+  --output eDP --mode 1920x1080 --pos 0x0 --rotate normal \
+  --output HDMI-A-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal \
+  --output DisplayPort-0 --off \
+  --output DisplayPort-1 --off
 }
 
 function qq3() {
@@ -123,16 +131,30 @@ function e2() {
   if [ $? != 0 ]
   then
     tmux new-session -s epices-dev -d
-    tmux send-keys -t epices-dev "~/PROJECTS/epices2" C-m
-    tmux new-window -t epices-dev -c '#{pane_current_path}'
-    tmux new-window -t epices-dev -c '#{pane_current_path}'
+    tmux send-keys -t epices-dev '/home/nico/PROJECTS/epices2' C-m
+    tmux send-keys -t epices-dev C-l
+    tmux new-window -t epices-dev -c '/home/nico/PROJECTS/epices2' -d
+    tmux new-window -t epices-dev -c '/home/nico/PROJECTS/epices2' -d
   fi
 
   tmux attach -t epices-dev
 }
 
+# Terminal init
 
-# run screen setup on terminal init
-qq3
+# screens auto setup
+if [ -n "$(xrandr |grep ' connected' |grep 'DisplayPort')" ]; then
+  qq3
+elif [ -n "$(xrandr |grep ' connected' |grep 'HDMI')" ]; then
+  qq2
+else
+  qq1
+fi
+
 # attach to last tmux session
-e2
+current_terminal=$(ps -p $(ps -p $$ -o ppid=) o args=)
+if [ ${current_terminal##*/} = 'terminator' ]; then
+  e2
+elif [ ${current_terminal##*/} = 'konsole' ]; then
+  ncspot
+fi
