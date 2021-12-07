@@ -7,6 +7,7 @@ mapkey('<Ctrl-y>', 'Show me the money', function() {
 unmap('<Ctrl-h>');
 
 // search engines
+unmap('s');
 unmap('sg');
 unmap('sd');
 unmap('sb');
@@ -16,5 +17,6 @@ unmap('ss');
 unmap('sh');
 unmap('sy');
 
-// an example to replace `T` with `gt`, click `Default mappings` to see how `T` works.
-map('yv', 's');
+mapkey('s', '#7Yank text of an element', function() {
+  Visual.toggle("y");
+});

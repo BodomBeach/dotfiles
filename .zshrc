@@ -42,6 +42,7 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 unsetopt correct_all
 
+alias e2='cd ~/PROJECTS/epices2'
 alias pid='echo "kill -9 PID" && lsof -wni tcp:3000'
 alias mdr='echo `lsof -t -wni tcp:3000`[-1]'
 alias wds='./bin/webpack-dev-server'
