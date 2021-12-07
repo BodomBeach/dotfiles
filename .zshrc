@@ -124,8 +124,8 @@ function e2() {
   then
     tmux new-session -s epices-dev -d
     tmux send-keys -t epices-dev "~/PROJECTS/epices2" C-m
-    tmux send-keys -t epices-dev c
-    tmux send-keys -t epices-dev c
+    tmux new-window -t epices-dev -c '#{pane_current_path}'
+    tmux new-window -t epices-dev -c '#{pane_current_path}'
   fi
 
   tmux attach -t epices-dev
@@ -135,4 +135,4 @@ function e2() {
 # run screen setup on terminal init
 qq3
 # attach to last tmux session
-# tmux a
+e2

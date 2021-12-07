@@ -3,7 +3,6 @@
 
 # Whitelisted files
 !.surfingkeys.js
-!.surfingkeys.txt
 !.config/Code/User/keybindings.json
 !.config/Code/User/settings.json
 !.config/Code/User/snippets/puts.code-snippets
