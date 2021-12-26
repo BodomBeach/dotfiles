@@ -52,7 +52,7 @@ alias rc='rails c'
 alias rdm='rake db:migrate'
 alias rdms='rake db:migrate:status'
 alias rdr='rake db:rollback'
-alias rdt='rake db:test:prepare'
+alias rdt='RAILS_ENV=test rake db:create db:structure:load'
 alias rdtt='rake db:drop db:create db:migrate db:seed'
 alias pk='cd ~/PROJECTS/parakraken'
 alias dps='docker ps -a --format "{{.Names}} --- {{.Status}} -- -{{.Ports}}"'
@@ -62,100 +62,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-function dpull() {
-  sudo docker pull registry.hespul.org:5000/epices/postgresql
-}
-
-function db() {
-  sudo docker exec -it $1 psql -U rails -d epices2
-}
-
-function dr() {
-  docker run -d --name $1 --restart unless-stopped -p 5434:5432 registry.hespul.org:5000/epices/postgresql:latest
-}
-
-function dbtest() {
-  rake db:create db:structure:load
-}
-
-function qq() {
-  xrandr \
-  --output eDP --mode 1920x1080 --pos 0x0 --rotate normal \
-  --output HDMI-A-0 --off \
-  --output DisplayPort-0 --off \
-  --output DisplayPort-1 --primary --mode 1920x1080 --pos 1929x0 --rotate normal
-}
-
-function qq2() {
-  xrandr \
-  --output eDP --mode 1920x1080 --pos 0x0 --rotate normal \
-  --output HDMI-A-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal \
-  --output DisplayPort-0 --off \
-  --output DisplayPort-1 --off
-}
-
-function qq3() {
-  xrandr \
-  --output eDP --mode 1920x1080 --pos 1080x1410 --rotate normal \
-  --output HDMI-A-0 --primary --mode 1920x1080 --pos 1081x330 --rotate normal \
-  --output DisplayPort-0 --off \
-  --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate left
-}
-
-# Kill puma process (normally last pid)
-function kpid() {
-  pidlist=(`lsof -t -wni tcp:3000`)
-  kill -9 $pidlist[-1]
-}
-
-# Change audio source1
-function s1() { # steelseries arctis chat
-  pacmd set-default-sink alsa_output.usb-SteelSeries_SteelSeries_Arctis_5_00000000-00.analog-chat
-}
-
-function s2() { # Sony SRS XB1
-  pacmd set-default-sink bluez_sink.F8_DF_15_78_98_05.a2dp_sink
-}
-
-function s3() { # Laptop sound
-  pacmd set-default-sink alsa_output.pci-0000_06_00.6.analog-stereo
-}
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 cd .
 
-function e2() {
-  tmux has-session -t epices-dev &> /dev/null
-
-  if [ $? != 0 ]
-  then
-    tmux new-session -s epices-dev -d
-    tmux send-keys -t epices-dev '/home/nico/PROJECTS/epices2' C-m
-    tmux send-keys -t epices-dev C-l
-    tmux new-window -t epices-dev -c '/home/nico/PROJECTS/epices2' -d
-    tmux new-window -t epices-dev -c '/home/nico/PROJECTS/epices2' -d
-  fi
-
-  tmux attach -t epices-dev
-}
-
-# Terminal init
-
-# screens auto setup
-if [ -n "$(xrandr |grep ' connected' |grep 'DisplayPort')" ]; then
-  qq3
-elif [ -n "$(xrandr |grep ' connected' |grep 'HDMI')" ]; then
-  qq2
-else
-  qq1
-fi
-
-# attach to last tmux session
-current_terminal=$(ps -p $(ps -p $$ -o ppid=) o args=)
-if [ ${current_terminal##*/} = 'terminator' ]; then
-  e2
-elif [ ${current_terminal##*/} = 'konsole' ]; then
-  ncspot
-fi
+source /home/nico/nicorc.sh
+~/setup_monitor

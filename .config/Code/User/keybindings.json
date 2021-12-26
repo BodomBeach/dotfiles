@@ -247,5 +247,104 @@
     {
       "key": "alt+s alt+d",
       "command": "git.stage"
+    },
+    {
+      "key": "shift+alt+,",
+      "command": "-gitlens.diffLineWithPrevious",
+      "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+      "key": "ctrl+k [IntlBackslash]",
+      "command": "-extension.selectAngleBrackets",
+      "when": "editorFocus"
+    },
+    {
+      "key": "alt+'",
+      "command": "extension.selectEitherQuote",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k ;",
+      "command": "-extension.selectEitherQuote",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k shift+'",
+      "command": "-extension.selectDoubleQuote",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k '",
+      "command": "-extension.selectSingleQuote",
+      "when": "editorFocus"
+    },
+    {
+      "key": "shift+alt+'",
+      "command": "extension.switchQuotes",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k shift+;",
+      "command": "-extension.switchQuotes",
+      "when": "editorFocus"
+    },
+    {
+      "key": "shift+alt+,",
+      "command": "extension.selectAngleBrackets",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k shift+,",
+      "command": "-extension.selectAngleBrackets",
+      "when": "editorFocus"
+    },
+    {
+      "key": "alt+;",
+      "command": "extension.selectBackTick",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k `",
+      "command": "-extension.selectBackTick",
+      "when": "editorFocus"
+    },
+    {
+      "key": "shift+alt+[",
+      "command": "extension.selectCurlyBrackets",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k shift+[",
+      "command": "-extension.selectCurlyBrackets",
+      "when": "editorFocus"
+    },
+    {
+      "key": "alt+9",
+      "command": "-workbench.action.openEditorAtIndex9"
+    },
+    {
+      "key": "alt+9",
+      "command": "extension.selectParenthesis",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k shift+9",
+      "command": "-extension.selectParenthesis",
+      "when": "editorFocus"
+    },
+    {
+      "key": "alt+[",
+      "command": "-editor.action.inlineSuggest.showPrevious",
+      "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+      "key": "alt+[",
+      "command": "extension.selectSquareBrackets",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+k [",
+      "command": "-extension.selectSquareBrackets",
+      "when": "editorFocus"
     }
 ]

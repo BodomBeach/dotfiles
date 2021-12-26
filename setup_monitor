@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [[ -n "$(xrandr |grep ' connected' |grep 'DisplayPort')" ]]; then
+
+  screen_setup=3
+
+  xrandr \
+  --output eDP --mode 1920x1080 --pos 1079x1080 --rotate normal \
+  --output HDMI-A-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal \
+  --output DisplayPort-0 --off \
+  --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate normal
+elif [[ -n "$(xrandr |grep ' connected' |grep 'HDMI')" ]]; then
+
+  screen_setup=2
+
+  xrandr \
+  --output eDP --mode 1920x1080 --pos 0x0 --rotate normal \
+  --output HDMI-A-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal \
+  --output DisplayPort-0 --off \
+  --output DisplayPort-1 --off
+
+else
+
+  screen_setup=1
+
+  xrandr \
+  --output eDP --mode 1920x1080 --pos 0x0 --rotate normal
+
+fi
+
+echo $screen_setup
+

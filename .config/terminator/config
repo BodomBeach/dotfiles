@@ -1,0 +1,142 @@
+[global_config]
+  handle_size = 7
+  window_state = maximise
+  borderless = True
+  scroll_tabbar = True
+  title_transmit_fg_color = "#204a87"
+  title_transmit_bg_color = "#204a87"
+  title_receive_fg_color = "#204a87"
+  title_inactive_bg_color = "#204a87"
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+  case_sensitive = False
+[keybindings]
+  new_tab = ""
+  go_next = ""
+  go_prev = ""
+  go_up = ""
+  go_down = ""
+  go_left = ""
+  go_right = ""
+  close_term = ""
+  copy = <Primary>c
+  paste = <Primary>v
+  toggle_scrollbar = Insert
+  search = <Primary>f
+  close_window = <Primary><Shift>w
+  next_tab = ""
+  prev_tab = ""
+  reset = <Primary><Shift>r
+  reset_clear = <Alt>r
+  layout_launcher = ""
+  preferences = <Alt>period
+  help = ""
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_type = transparent
+    cursor_color = "#ffffff"
+    cursor_color_fg = False
+    font = Monospace 15
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_on_keystroke = False
+    scrollback_lines = 2000
+    use_system_font = False
+    copy_on_selection = True
+    background_image = /home/nico/Downloads/file_settings/vscode_settings.json
+    background_alpha = 0.8
+  [[reload folder for rvm]]
+    cursor_color = "#aaaaaa"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+  [[LPK]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 1920, 1005
+      title = /usr/bin/zsh
+      last_active_term = 9fdb8011-1822-4b79-a702-ca1dd7ac2cf3
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 957
+      ratio = 0.49973890339425586
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 708909be-7934-40ca-a75c-3f635de8628b
+      command = echo 1
+      directory = /
+    [[[terminal3]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      profile = default
+      uuid = 9fdb8011-1822-4b79-a702-ca1dd7ac2cf3
+      command = ""
+      directory = ""
+  [[New Layout]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 1920, 1005
+      title = /usr/bin/zsh
+      last_active_term = b59f0772-68ca-4c8d-86a3-5c3102838406
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 958
+      ratio = 0.5002610966057441
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = b59f0772-68ca-4c8d-86a3-5c3102838406
+      directory = ""
+    [[[child3]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 500
+      ratio = 0.5
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = default
+      uuid = 26c66a9c-f398-476d-9604-3676343f46e1
+      directory = /
+      command = ""
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = default
+      uuid = 3426f62b-2766-4d5f-864f-31e85b816229
+      directory = ""
+      command = rs
+[plugins]

@@ -1,7 +1,7 @@
 {
     "todo-tree.tree.showScanModeButton": false,
     "yaml.schemas": {
-      "file:///home/nico/.vscode/extensions/atlassian.atlascode-2.10.0/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+      "file:///home/nico/.vscode/extensions/atlassian.atlascode-2.10.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "workbench.startupEditor": "newUntitledFile",
     "files.autoSave": "onFocusChange",
@@ -30,4 +30,13 @@
   "editor.cursorSmoothCaretAnimation": true,
   "ruby.intellisense": "rubyLocate",
   "workbench.editor.untitled.hint": "hidden",
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.suggest.showIcons": false,
+  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback', 'material-icons'",
+  "window.customMenuBarAltFocus": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "explorer.confirmDelete": false,
+  "security.workspace.trust.untrustedFiles": "open"
+
 }
